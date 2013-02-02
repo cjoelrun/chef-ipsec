@@ -17,7 +17,11 @@
 # limitations under the License.
 #
 
+# TODO: ADD YUM EPEL
+
 package "strongswan"
+
+# TODO: CREATE DIR AND PLACE FILES INSIDE
 
 template "/etc/ipsec.conf" do
   source "ipsec.conf.erb"

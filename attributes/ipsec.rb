@@ -6,3 +6,12 @@ default[:ipsec][:charon][:modules] = %w[
   xcbc stroke kernel-netlink socket-default updown
 ]
 default[:ipsec][:charon][:multiple_authentication] = "no"
+
+# Platform specific attributes
+case platform
+  when "ubuntu"
+  default[:ipsec][:dir] = "/etc/"
+
+  when "centos"
+  default[:ipsec][:dir] = "/etc/strongswan/"
+end
